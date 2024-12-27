@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Silkscreen:wght@400;700&display=swap');
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+html {
+   font-size: 20px;
+}
+
+:root {
+   --cell-color: #1C1D21;
+}
+
+body {
+   background-color: black;
+   color: #fff;
+   font-family: 'Geist', sans-serif;
+}
+
+.title {
+   text-align: center;
+   font-size: 3rem;
+   margin: 30px 0 30px;
+}
+
+.game__wrapper {
+   display: none;
+   flex-direction: column;
+   gap: 2vh;
+   height: 100vh;
+}
+
+.players__wrapper {
+   display: flex;
+   margin: 0 auto;
+   justify-content: center;
+   gap: 150px;
+}
+
+.player__score {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+.score {
+   font-size: 3rem;
+}
+
+.game-board {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   grid-template-rows: repeat(3, 1fr);
+   gap: 15px;
+   width: 500px;
+   height: 500px;
+   margin: 0 auto;
+}
+
+.cell {
+   background-color: var(--cell-color);
+   color: white;
+   font-size: 6rem;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   cursor: pointer;
+   opacity: 1;
+   transition: opacity 0.3s ease
+}
+
+.cell.preview {
+   color: rgba(255, 255, 255, 0.1);
+   opacity: 0.7;
+}
+
+
+.x {
+   color: #0C9784;
+}
+
+.o {
+   color: #B31A57
+}
+
+.status {
+   text-align: center;
+}
+
+.names__wrapper {
+   display: flex;
+   flex-direction: column;
+   gap: 50px;
+   width: 400px;
+   margin: 0 auto;
+}
+
+.player__name {
+   display: flex;
+   flex-direction: column;
+   font-size: 1.5rem;
+   text-align: center;
+}
+
+.player__name p {
+   display: flex;
+   gap: 7px;
+   justify-content: center;
+}
+
+.player__name input {
+   height: 3rem;
+   font-size: 1.5rem;
+   background-color: #0A0A0A;
+   border: 1px solid #454545;
+   margin-top: 10px;
+   color: #fff;
+   padding: 10px
+}
+
+.player__name span {
+   font-size: 1.7rem;
+}
+
+.start {
+   margin: 0 auto;
+   align-self: center;
+   background-color: #0C451B;
+   text-decoration: none;
+   color: #fff;
+   padding: 10px 25px;
+   font-size: 1.5rem;
+   transition: background-color 0.3s ease-in-out;
+}
+
+.start:hover {
+   background-color: #45A557;
+}
+
+@media (max-width: 600px) {
+   .game__wrapper {
+      gap: 5vh;
+   }
+
+   .game-board {
+      width: 80vw;
+      height: 80vw;
+   }
+
+   .cell {
+      font-size: 3rem;
+   }
+
+   .player__name input {
+      width: 80vw;
+      margin: 0 auto;
+   }
+}
