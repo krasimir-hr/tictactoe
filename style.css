@@ -18,6 +18,17 @@ body {
    background-color: black;
    color: #fff;
    font-family: 'Geist', sans-serif;
+   height: 100vh;
+   display: flex;
+   flex-direction: column;
+}
+
+a {
+   color: white;
+}
+
+main {
+   flex: 1;
 }
 
 .title {
@@ -139,6 +150,11 @@ body {
 
 .start:hover {
    background-color: #45A557;
+}
+
+footer {
+   text-align: center;
+   padding-bottom: 10px;
 }
 
 @media (max-width: 600px) {
