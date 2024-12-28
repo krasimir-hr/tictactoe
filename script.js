@@ -1,5 +1,3 @@
-import { LogoGithub } from '@geist/icons';
-
 const Gameboard = (() => {
    const board = Array(9).fill(null);
 
